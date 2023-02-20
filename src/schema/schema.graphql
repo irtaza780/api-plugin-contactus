@@ -1,35 +1,22 @@
-input transactionInput {
-  _id: String
-  amount: Float
-  isApproved: Boolean
+input contactUsInput {
+  firstName: String!
+  lastName: String!
+  email: String!
+  contactNumber: String!
+  officeAddress: String!
+  emailMessage: String!
 }
 
-type transactionOutput {
+type contactUsOutput {
   success: Boolean
   message: String
   status: Int
 }
 
-type transaction {
-  _id: String
-  amount: Float
-  isApproved: Boolean
-  transactionBy: String
-  transactionOutput: transactionOutput
+type contactUs {
+  contactUs: contactUsOutput
 }
 
 extend type Mutation {
-  makeTransaction(input: transactionInput): transaction
-  deleteTransaction(transactionId: String!): transaction
-  approveTransaction(transactionId: String!): transaction
-}
-
-type transactions {
-  transactions: [transaction]
-  response: transactionOutput
-}
-
-extend type Query {
-  getAllTransactions: transactions
-  getUserTransactions: transactions
+  contactUs(input: contactUsInput!): contactUs
 }

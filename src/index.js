@@ -16,13 +16,13 @@ export default async function register(app) {
     label: pkg.label,
     name: pkg.name,
     version: pkg.version,
-    collections: {
-      Transactions: {
-        name: "Transactions",
-        updatedAt: { type: Date, default: Date.now },
-        createdAt: { type: Date, default: Date.now },
-      },
-    },
+    // collections: {
+    //   Transactions: {
+    //     name: "Transactions",
+    //     updatedAt: { type: Date, default: Date.now },
+    //     createdAt: { type: Date, default: Date.now },
+    //   },
+    // },
     graphQL: {
       schemas: [schemas],
       resolvers,
