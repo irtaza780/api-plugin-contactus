@@ -2,7 +2,7 @@
   "name": "@partown/api-plugin-contactus",
   "description": "Plugin for contact us form",
   "label": "ContactUs Plugin",
-  "version": "1.0.0-development",
+  "version": "2.0.0-development",
   "main": "index.js",
   "type": "module",
   "engines": {
